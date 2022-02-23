@@ -262,3 +262,64 @@ img {
     justify-content: center;
     overflow: hidden;
 }
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-social,
+.home-scroll {
+    position: absolute;
+}
+
+.home-social {
+    bottom: 5rem;
+    left: 0;
+    display: grid;
+    row-gap: .5rem;
+}
+
+.home-social-link {
+    width: max-content;
+    background-color: var(--container-color);
+    color: var(--first-color);
+    padding: .25rem;
+    border-radius: .25rem;
+    display: flex;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+.home-social-link:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.home-social::after {
+    content: '';
+    width: 32px;
+    height: 2px;
+    background-color: var(--first-color);
+    transform: rotate(90deg) translate(16px, 3px);
+}
+
+.home-scroll {
+    color: var(--first-color);
+    right: 1.5rem;
+    bottom: 4rem;
+    display: grid;
+    row-gap: 2.25rem;
+    justify-items: center;
+}
+
+.home-scroll-icon {
+    font-size: 1.25rem;
+}
+
+.home-scroll-name {
+    font-size: var(--smaller-font-size);
+    transform: rotate(-90deg);
+}
