@@ -8,3 +8,27 @@ function scrollHeader() {
         header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+// Services modal
+const modalViews = document.querySelectorAll('.services-modal'),
+    modalBtns = document.querySelectorAll('.services-button'),
+    modalClose = document.querySelectorAll('.services-modal-close');
+
+let modal = function(modalClick) {
+    modalViews[modalClick].classList.add('active-modal');
+}
+
+modalBtns.forEach((mb, i) => {
+    mb.addEventListener('click', () => {
+        modal(i)
+    })
+    console.log(modalViews[i]);
+})
+
+modalClose.forEach((mc) => {
+    mc.addEventListener('click', () => {
+        modalViews.forEach((mv) => {
+            mv.classList.remove('active-modal');
+        })
+    })
+})

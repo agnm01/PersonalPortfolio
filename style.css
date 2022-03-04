@@ -563,3 +563,11 @@ img {
     color: var(--first-color);
     cursor: pointer;
 }
+
+
+/* Active modal */
+
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
